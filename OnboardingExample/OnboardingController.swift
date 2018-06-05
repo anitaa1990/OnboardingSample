@@ -2,7 +2,12 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!{
+        didSet{
+            scrollView.delegate = self
+        }
+    }
+    
     @IBOutlet weak var pageControl: UIPageControl!
     
     
